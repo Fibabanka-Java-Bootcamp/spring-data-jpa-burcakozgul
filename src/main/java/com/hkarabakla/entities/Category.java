@@ -4,22 +4,23 @@ import javax.persistence.*;
 import java.util.List;
 
 @Entity
+@Table(name = "categories")
 public class Category {
 
     @Id
     @GeneratedValue
-    private int id;
+    private Integer id;
 
     private String name;
 
-    @OneToMany(mappedBy = "category", cascade = CascadeType.REMOVE)
+    @OneToMany(mappedBy = "category",cascade = CascadeType.REMOVE)
     private List<Book> books;
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -44,7 +45,7 @@ public class Category {
         return "Category{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", books=" + books +
+//                ", books=" + books +
                 '}';
     }
 }

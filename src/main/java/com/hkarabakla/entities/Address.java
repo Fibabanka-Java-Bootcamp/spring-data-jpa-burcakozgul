@@ -1,11 +1,9 @@
 package com.hkarabakla.entities;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.OneToOne;
+import javax.persistence.*;
 
 @Entity
+@Table(name="addresses")
 public class Address {
 
     @Id
