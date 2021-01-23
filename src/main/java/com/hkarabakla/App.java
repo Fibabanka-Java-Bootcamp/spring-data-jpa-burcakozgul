@@ -24,10 +24,15 @@ public class App {
         UserService userService = (UserService) appContext.getBean("userService");
         userService.userOperations();
 
+        AddressService addressService = (AddressService) appContext.getBean("addressService");
+        addressService.findUsersByCityName();
+
         OrderService orderService = (OrderService) appContext.getBean("orderService");
         orderService.orderOperations();
 
         userService.findOrdersByUserName();
+
+
 
         appContext.close();
     }

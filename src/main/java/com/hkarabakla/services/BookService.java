@@ -67,6 +67,12 @@ public class BookService {
     }
     public void findByBookName(){
         List<Book> books = bookRepo.findByNameIgnoreCaseContaining("spring");
+        System.out.println("Books including 'spring' word: ");
         System.out.println(books);
+
+        List<Book> books1 = bookRepo.findAllByAuthors_Name("Sabahattin Ali");
+        System.out.println("Sabahattin Ali's books: ");
+        System.out.println(books1);
     }
+
 }

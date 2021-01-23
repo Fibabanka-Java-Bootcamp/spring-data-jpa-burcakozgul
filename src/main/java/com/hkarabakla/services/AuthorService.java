@@ -47,7 +47,9 @@ public class AuthorService {
     }
     public void findBooksByAuthorName(){
         List<Book> books= authorRepo.findBooksByAuthorName("Craig Walls");
+        System.out.println("Craig Walls's books: ");
         System.out.println(books);
     }
+
 
 }

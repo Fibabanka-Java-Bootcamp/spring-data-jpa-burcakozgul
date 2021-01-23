@@ -10,4 +10,6 @@ public interface BookRepo extends CrudRepository<Book, String> {
     List<Book> findByNameIgnoreCaseContaining(String name);
 
     List<Book> findByName(String name);
+
+    List<Book> findAllByAuthors_Name(String name);
 }
